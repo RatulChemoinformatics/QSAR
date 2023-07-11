@@ -4,9 +4,9 @@ from PIL import Image
 import subprocess
 import os
 import base64
-import pickle
 import sklearn
 from streamlit_option_menu import option_menu
+from joblib import load
 
 # Set page configuration
 st.set_page_config(page_title='ASHS-Pred', page_icon='🌐', layout="wide")
@@ -38,10 +38,10 @@ This app allows you to predict the bioactivity of any molecule towards inhibitin
 """)
 
 # loading the saved models
-bioactivity_first_model = pickle.load(open('akt_model.pkl', 'rb'))
-bioactivity_second_model = pickle.load(open('stat3_model.pkl', 'rb'))
-bioactivity_third_model = pickle.load(open('hrsp90_model.pkl', 'rb'))
-bioactivity_fourth_model = pickle.load(open('src_model.pkl', 'rb'))
+bioactivity_first_model = load('akt_model.pkl')
+bioactivity_second_model = load('stat3_model.pkl')
+bioactivity_third_model = load('hrsp90_model.pkl')
+bioactivity_fourth_model = load('src_model.pkl')
 
 
 # For hiding streamlit messages
