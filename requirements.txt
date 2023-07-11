@@ -1,7 +1,6 @@
-streamlit
 streamlit_option_menu
+streamlit
 pandas
 base58
 Pillow
 pickle-mixin
-sklearn
