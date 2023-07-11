@@ -5,6 +5,7 @@ import subprocess
 import os
 import base64
 import pickle
+import sklearn
 from streamlit_option_menu import option_menu
 
 # Set page configuration
